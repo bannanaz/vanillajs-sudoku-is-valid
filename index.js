@@ -10,25 +10,10 @@ var board = [
   [".", ".", ".", ".", "8", ".", ".", "7", "9"],
 ];
 
-var board2 = [
-  ["5", "3", ".", ".", "7", ".", ".", ".", "."],
-  ["6", ".", ".", "1", "9", "5", ".", ".", "."],
-  [".", ".", "5", ".", ".", ".", ".", "6", "."],
-  ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
-  ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
-  ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
-  [".", "6", ".", ".", ".", ".", "2", "8", "."],
-  [".", ".", ".", "4", "1", "9", ".", ".", "5"],
-  [".", ".", ".", ".", "8", ".", ".", "7", "9"],
-];
-
 window.onload = function () {
   setBoard();
   isValidSudoku(board);
   validationMessage();
-  setBoard2();
-  isValidSudoku(board2);
-  validationMessage2();
 };
 
 function setBoard() {
@@ -115,18 +100,6 @@ function validationMessage() {
     valid.classList.add("valid-message");
   } else {
     let valid = document.getElementById("valid");
-    valid.append("Board is not valid!");
-    valid.classList.add("not-valid-message");
-  }
-}
-
-function validationMessage2() {
-  if (isValidSudoku(board2)) {
-    let valid = document.getElementById("valid2");
-    valid.append("Board is valid!");
-    valid.classList.add("valid-message");
-  } else {
-    let valid = document.getElementById("valid2");
     valid.append("Board is not valid!");
     valid.classList.add("not-valid-message");
   }

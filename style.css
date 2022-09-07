@@ -12,15 +12,6 @@ body {
     flex-wrap: wrap;
 }
 
-#board2 {
-    width: 525px;
-    height: 517px;
-
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
 @media screen and (max-width: 800px) {
     #board {
          width: 427px;
@@ -72,22 +63,22 @@ body {
     border-right: 2px solid black;
 }
 
-#valid  {
-    padding: 10px 0px;
-}
-
-#valid2 {
-    padding: 17px 0px;
+.board-padding {
+    margin-bottom: 70px;
 }
 
 .valid-message {
     color: limegreen;
     font-size: 18px;
     font-weight: 600;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .not-valid-message {
     color: red;
     font-size: 18px;
     font-weight: 600;
+    width: 100%;
+    margin-bottom: 20px;
 }
